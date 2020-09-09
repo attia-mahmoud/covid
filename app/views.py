@@ -9,6 +9,7 @@ from django.forms.models import model_to_dict
 from django.core import serializers
 # Create your views here.
 
+app = Flask(__name__)
 
 def index(request):
     return render(request, "app/index.html")
