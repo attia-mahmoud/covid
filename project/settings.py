@@ -26,7 +26,7 @@ SECRET_KEY = 'svki-cj4du@6b6+a-^1cbf8%o^-f^#$je@ytj3m^s!^s)i4xo^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mahmoudattia-covid.herokuapp.com', 'https://mahmoudtest2.onrender.com/']
+ALLOWED_HOSTS = ['mahmoudattia-covid.herokuapp.com', 'https://mahmoudtest2.onrender.com/', 'https://mahmoudattia1234.herokuapp.com/']
 
 
 # Application definition
