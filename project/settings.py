@@ -26,7 +26,7 @@ SECRET_KEY = 'svki-cj4du@6b6+a-^1cbf8%o^-f^#$je@ytj3m^s!^s)i4xo^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mahmoudattia-covid.herokuapp.com', 'https://mahmoudtest2.onrender.com/', 'https://mahmoudattia1234.herokuapp.com/']
+ALLOWED_HOSTS = [ '127.0.0.1', 'mahmoudattia-covid.herokuapp.com', 'https://mahmoudtest2.onrender.com/', 'https://mahmoudattia1234.herokuapp.com/']
 
 
 # Application definition
@@ -42,8 +42,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -136,9 +136,9 @@ STATICFILES_DIRS = (
 )
 
 #  Add configuration for static files storage using whitenoise
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
